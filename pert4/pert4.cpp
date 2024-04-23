@@ -19,6 +19,7 @@ void bagi(int angka1,int angka2){
 int main(){
     int angka1,angka2;
     int pilih;
+    Menu:
     cout<<"Menu"<< endl;
     cout<<"1. Tambah"<< endl;
     cout<<"2. Kurang"<< endl;
@@ -27,7 +28,6 @@ int main(){
     cout<<"5. EXIT"<< endl;
     cout<<"Pilihan : ";
     cin >>pilih;
-    menu:
     switch(pilih){
         case 1:
             cout << "Angka 1 = ";
@@ -62,7 +62,8 @@ int main(){
             break;
         default:
             cout<<"Pilihan Tidak Ada"<<endl;
-            goto menu;
+            goto Menu;
+            break;
     }
     return 0;
 }
