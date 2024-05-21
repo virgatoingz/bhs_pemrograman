@@ -1,0 +1,44 @@
+@startuml soal7
+
+start
+
+:mainMenu;
+:Masukkan Pilihan;
+switch (Pilihan = ?)
+    case(1)
+        :Penjumlahan;
+        :Masukkan angka pertama;
+        :Masukkan angka kedua;
+        :Memanggil fungsi tambah(a, b);
+        :Menampilkan hasil penjumlahan;
+        stop
+    case (2)
+        :Pengurangan;
+        :Masukkan angka pertama;
+        :Masukkan angka kedua;
+        :Memanggil fungsi kurang(a, b);
+        :Menampilkan hasil pengurangan;
+        stop
+    case (3)
+        :Perkalian;
+        :Masukkan angka pertama;
+        :Masukkan angka kedua;
+        :Memanggil fungsi kali(a, b);
+        :Menampilkan hasil perkalian;
+        stop
+    case (4)
+        :Pembagian;
+        :Masukkan angka pertama;
+        :Masukkan angka kedua;
+        :Memanggil fungsi bagi(a, b);
+        :Menampilkan hasil pembagian atau pesan kesalahan;
+        stop
+    case (default)
+        :Pilihan tidak valid;
+        :Menampilkan pesan kesalahan;
+        stop
+endswitch
+
+stop
+
+@enduml
