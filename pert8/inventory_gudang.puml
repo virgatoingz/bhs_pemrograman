@@ -1,0 +1,29 @@
+@startuml inventory_gudang.puml
+
+start
+
+:Menampilkan Menu Utama;
+:1. Tambah Stok;
+:2. Proses Pesanan;
+:3. Exit;
+
+if (Pilihan == Tambah Stok?) then (ya)
+  :Masukkan Detail Barang;
+  :Update Stok;
+  :Kembali ke Menu Utama;
+else (tidak)
+  if (Pilihan == Proses Pesanan?) then (ya)
+    :Pilih Jenis Pesanan;
+    :Proses Pesanan;
+    :Kembali ke Menu Utama;
+  else (tidak)
+    if (Pilihan == Exit?) then (ya)
+      :Keluar dari Sistem;
+      stop
+    endif
+  endif
+endif
+
+stop
+
+@enduml

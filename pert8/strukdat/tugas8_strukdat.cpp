@@ -34,6 +34,7 @@ public:
         Node* newNode = new Node;
         newNode->data = data;
         if (position == 0 || head == nullptr) {
+            //akan memanggil fungsi memasukan angka depan jika posisinya 0
             insertFront(data);
             return;
         }
@@ -160,14 +161,14 @@ int main() {
 
     while (running) {
         cout << "\nMenu:\n";
-        cout << "a. Insert depan\n";
-        cout << "b. Insert tengah\n";
-        cout << "c. Insert belakang\n";
-        cout << "d. Delete depan\n";
-        cout << "e. Delete tengah\n";
-        cout << "f. Delete belakang\n";
-        cout << "g. Tampilkan data\n";
-        cout << "h. Keluar\n";
+        cout << "1. Insert depan\n";
+        cout << "2. Insert tengah\n";
+        cout << "3. Insert belakang\n";
+        cout << "4. Delete depan\n";
+        cout << "5. Delete tengah\n";
+        cout << "6. Delete belakang\n";
+        cout << "7. Tampilkan data\n";
+        cout << "8. Keluar\n";
         cout << "Pilih: ";
         cin >> choice;
 
@@ -179,7 +180,7 @@ int main() {
         }
 
         switch (choice) {
-            case 'a':
+            case '1':
                 cout << "Masukkan data untuk ditambahkan di depan: ";
                 cin >> data;
                 if (cin.fail()) {
@@ -190,7 +191,7 @@ int main() {
                 }
                 list.insertFront(data);
                 break;
-            case 'b':
+            case '2':
                 cout << "Masukkan posisi node sebelumnya: ";
                 cin >> position;
                 cout << "Masukkan data untuk ditambahkan di tengah: ";
@@ -203,7 +204,7 @@ int main() {
                 }
                 list.insertMiddle(position, data);
                 break;
-            case 'c':
+            case '3':
                 cout << "Masukkan data untuk ditambahkan di belakang: ";
                 cin >> data;
                 if (cin.fail()) {
@@ -214,10 +215,10 @@ int main() {
                 }
                 list.insertEnd(data);
                 break;
-            case 'd':
+            case '4':
                 list.deleteFront();
                 break;
-            case 'e':
+            case '5':
                 cout << "Masukkan posisi node yang akan dihapus: ";
                 cin >> position;
                 if (cin.fail()) {
@@ -228,13 +229,13 @@ int main() {
                 }
                 list.deleteMiddle(position);
                 break;
-            case 'f':
+            case '6':
                 list.deleteEnd();
                 break;
-            case 'g':
+            case '7':
                 list.displayList();
                 break;
-            case 'h':
+            case '8':
                 running = false;
                 break;
             default:
