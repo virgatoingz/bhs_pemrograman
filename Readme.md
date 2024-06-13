@@ -29,3 +29,18 @@
 28. `git prune`: Menghapus object yang tidak memiliki incoming pointers.
 29. `git fsck`: Memeriksa keseluruhan file system Git.
 30. `git rebase`: Menerapkan ulang commit di branch lain.
+
+…or create a new repository on the command line
+echo "# struktur_data" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:virgatoingz/struktur_data.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin git@github.com:virgatoingz/struktur_data.git
+git branch -M main
+git push -u origin main
+
